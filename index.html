@@ -1,0 +1,54 @@
+<html> 
+<head>
+<title> My family Book </title>
+</head>
+
+<body style="background-color:orangered;">
+
+    <h1 id="family_member_name" text-align: center></h1>
+
+ <img src="Myfamily1.jpg" style="width :30%;" id="family_member_image">
+ <style>
+    img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 150px;
+    }
+    </style>
+
+
+<script>
+
+var image = ['Myfamily1.jpg','AdityaN.jpg','Mom.jpg','AuntUncle.jpg','Aish.jpg','Myfamily2.jpg']
+
+var name = ["Family", "Aditya", "Mom", "Aunt&Uncle", "Aish", "Myfamily"]
+
+var i = 0;
+
+function update()
+{
+
+i++;
+var numbers_of_family_members_in_array = 5
+if (i > numbers_of_family_members_in_array)
+{
+    i = 0;
+}
+
+var updatedImage = image[i];
+var updatedName = name[i];
+document.getElementById('family_member_image').src = updatedImage;
+document.getElementById('family_member_name').innerHTML = updatedName;
+}
+
+
+</script>
+
+
+
+<button onclick="update();" class="button">Next</button>
+
+
+</body>
+</html>
